@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Berhasil! | EduLearn Academy</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS Khusus untuk Halaman Konfirmasi */
+        .confirmation-section {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+            min-height: 80vh;
+        }
+        .confirmation-section h2 {
+            color: #27ae60; /* Warna hijau sukses */
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .confirmation-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .confirmation-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .course-info-display {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <i class="fas fa-book-open"></i> EduLearn Academy
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#tips">Tips Belajar</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="confirmation" class="confirmation-section">
+            <div class="container">
+                <div class="confirmation-box">
+                    <h2><i class="fas fa-check-circle"></i> Pendaftaran Berhasil!</h2>
+                    <p>Terima kasih atas pendaftaran Anda. Kami telah menerima data Anda dan akan segera memprosesnya.</p>
+                    
+                    <div id="display-course" class="course-info-display">
+                        </div>
+
+                    <p style="font-size: 1rem; margin-top: 30px;">
+                        Detail lengkap mengenai pembayaran dan akses kelas akan dikirimkan ke email Anda dalam waktu 1x24 jam.
+                    </p>
+
+                    <a href="index.html" class="cta-button" style="background-color: #3498db; margin-top: 20px;">Kembali ke Beranda</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EduLearn Academy. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Logika sederhana untuk mengambil data dari URL (jika ada) dan menampilkannya
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseName = urlParams.get('course');
+            const displayElement = document.getElementById('display-course');
+
+            if (courseName && displayElement) {
+                // Menampilkan nama kursus yang dikonfirmasi
+                displayElement.innerHTML = `Kursus Anda: **${courseName}**`;
+            } else {
+                displayElement.innerHTML = `Pendaftaran Anda sedang diproses.`;
+            }
+        });
+    </script>
+</body>
+</html>

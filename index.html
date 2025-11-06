@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn Academy - Belajar Online Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS tambahan agar ikon dan judul rata tengah jika tidak ada gambar */
+        .course-card h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .course-card h3 i {
+            margin-right: 10px;
+            color: #3498db; /* Warna ikon agar menonjol */
+        }
+        /* Tambahkan ini di style.css agar tampilan card tanpa gambar tetap rapi */
+        .course-card {
+            min-height: 200px; /* Minimal tinggi agar kartu tidak terlalu pendek */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <i class="fas fa-book-open"></i> EduLearn Academy
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#tips">Tips Belajar</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Belajar Online Bersama EduLearn</h2>
+                <p>Tingkatkan pengetahuan Anda dengan kursus berkualitas dari para ahli. Tonton video pengantar kami dan mulai perjalanan belajar Anda hari ini!</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/4uBnmas4BiM?si=M-vQ6ZKOptAtdXiZ" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <a href="registration.html" class="cta-button">Daftar Sekarang</a>
+            </div>
+        </section>
+
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>Kursus Populer</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h3><i class="fas fa-code"></i> Pemrograman Dasar</h3>
+                        <p>Pelajari dasar-dasar coding dengan bahasa Python dan JavaScript.</p>
+                        <a href="programming_course.html" class="learn-more">Pelajari Lebih Lanjut</a> 
+                    </div>
+                    <div class="course-card">
+                        <h3><i class="fas fa-calculator"></i> Matematika Lanjutan</h3>
+                        <p>Kuasai konsep aljabar, kalkulus, dan statistik untuk jenjang tinggi.</p>
+                        <a href="mathematics_course.html" class="learn-more">Pelajari Lebih Lanjut</a>
+                    </div>
+                    <div class="course-card">
+                        <h3><i class="fas fa-language"></i> Bahasa Inggris</h3>
+                        <p>Tingkatkan kemampuan speaking, writing, dan grammar Anda.</p>
+                        <a href="english_course.html" class="learn-more">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="tips">
+            <div class="container">
+                <h2>Tips Belajar Efektif</h2>
+                <ul>
+                    <li>Buat jadwal belajar rutin untuk konsistensi.</li>
+                    <li>Gunakan teknik pomodoro untuk fokus maksimal.</li>
+                    <li>Diskusikan materi dengan teman atau mentor.</li>
+                    <li>Jaga kesehatan fisik dan mental selama belajar.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Hubungi Kami</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informasi Kontak</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Jakarta, Indonesia</p>
+                        <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@edulearnacademy.com</p>
+                        <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00 WIB</p>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <input type="text" id="contact-name" placeholder="Nama Anda" required> 
+                            <input type="email" id="contact-email" placeholder="Email Anda" required>
+                            <textarea id="contact-message" placeholder="Pesan Anda" required></textarea>
+                            <button type="submit" class="submit-button">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EduLearn Academy. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
